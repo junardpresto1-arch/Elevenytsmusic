@@ -19,7 +19,7 @@ if sys.platform != "win32":
 from Elevenyts import (tune, app, config, db,
                    logger, stop, userbot, yt)
 from Elevenyts.plugins import all_modules
-from Elevenyts.helpers.startup_hooks import precheck_channels  # Fixed: Import moved to top
+from Elevenyts.helpers._startup_hooks import precheck_channels  # Fixed: Import moved to top
 
 
 async def main():
