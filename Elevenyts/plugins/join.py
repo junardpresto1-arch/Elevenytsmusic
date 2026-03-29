@@ -1,38 +1,15 @@
+from pyrogram.errors import UserAlreadyParticipant
+import logging
 
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
-from Elevenyts import app
+logger = logging.getLogger(__name__)
 
-
-MUST_JOIN = "ytshelp"
-
-@app.on_message(filters.incoming & filters.private, group=-1)
-async def must_join_channel(app: Client, msg: Message):
-    if not MUST_JOIN:
-        return
-    try:
+async def precheck_channels(client):
+    targets = ["@ytslogs", "@ytshelp"]
+    for chan in targets:
         try:
-            await app.get_chat_member(MUST_JOIN, msg.from_user.id)
-        except UserNotParticipant:
-            if MUST_JOIN.isalpha():
-                link = "https://t.me/" + MUST_JOIN
-            else:
-                chat_info = await app.get_chat(MUST_JOIN)
-                link = chat_info.invite_link
-            try:
-                await msg.reply_photo(
-                    photo="https://telegra.ph/file/b61227af05544deb76a34.jpg", caption=f"๏ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ʏᴏᴜ'ᴠᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ [๏sᴜᴘᴘᴏʀᴛ๏]({link}) ʏᴇᴛ, ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴍᴇ ᴛʜᴇɴ ᴊᴏɪɴ [๏sᴜᴘᴘᴏʀᴛ๏]({link}) ᴀɴᴅ sᴛᴀʀᴛ ᴍᴇ ᴀɢᴀɪɴ ! ",
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("๏Jᴏɪɴ๏", url=link),
-                            ]
-                        ]
-                    )
-                )
-                await msg.stop_propagation()
-            except ChatWriteForbidden:
-                pass
-    except ChatAdminRequired:
-        print(f"๏ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴍᴜsᴛ_Jᴏɪɴ ᴄʜᴀᴛ ๏: {MUST_JOIN} !")
+            await client.join_chat(chan)
+            logger.info(f"✓ Joined {chan}")
+        except UserAlreadyParticipant:
+            logger.info(f"↻ Already in {chan}")
+        except Exception as e:
+            logger.warning(f"✗ Failed to join {chan}: {e}")
