@@ -1,18 +1,14 @@
 <div align="center">
-  <img src="https://i.pinimg.com/736x/c9/41/9e/c9419ec90a167a3aa4563c017b1f2b8d.jpg" alt="˹Elevenyts ᴍᴜꜱɪᴄ˼" width="400"/>
+  <img src="https://i.pinimg.com/736x/c9/41/9e/c9419ec90a167a3aa4563c017b1f2b8d.jpg"
+    alt="˹Elevenyts ᴍᴜꜱɪᴄ˼" width="400"/>
   
   # 🎵 ˹Nyx ᴍᴜꜱɪᴄ˼
-
-  
   <p><b>A Powerful Telegram Music Player Bot</b></p>
   
   [![Telegram](https://img.shields.io/badge/Telegram-Channel-blue?style=for-the-badge&logo=telegram)](https://t.me/elevenyts)
   [![Telegram](https://img.shields.io/badge/Telegram-Support-blue?style=for-the-badge&logo=telegram)](https://t.me/elevenytsmusic)
   [![Telegram](https://img.shields.io/badge/Telegram-String_Session-Darkblue?style=for-the-badge&logo=telegram)](https://t.me/genStringbot)
   [![Cloudflare](https://img.shields.io/badge/Pinger-Cloudflare-orange?style=for-the-badge&logo=cloudflare)](https://dash.cloudflare.com)
-
-
-  
   
 </div>
 
@@ -137,12 +133,6 @@ bash start
 - `/restart` - Restart the bot
 - `/logs` - Get bot logs
 
-## 📞 Support & Contact
-
-- **Telegram Channel**: [@Elevenyts](https://t.me/elevenyts)
-- **Support Group**: [@Elevenyts Music](https://t.me/elevenytsmusic) 
-
----
 
 ## 📝 Notes
 
