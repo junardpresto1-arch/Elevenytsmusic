@@ -1,7 +1,9 @@
+# nyxmusic
 <div align="center">
-  <img src="https://files.catbox.moe/f177uk.jpg" alt="˹Elevenyts ᴍᴜꜱɪᴄ˼" width="400"/>
+  <img src="https://i.pinimg.com/736x/c9/41/9e/c9419ec90a167a3aa4563c017b1f2b8d.jpg
+  " alt="˹Elevenyts ᴍᴜꜱɪᴄ˼" width="400"/>
   
-  # 🎵 ˹ᴇʟᴇᴠᴇɴʏᴛꜱ ᴍᴜꜱɪᴄ˼
+  # 🎵 ˹nyx ᴍᴜꜱɪᴄ˼
 
   
   <p><b>A Powerful Telegram Music Player Bot</b></p>
@@ -139,8 +141,8 @@ bash start
 
 ## 📞 Support & Contact
 
-- **Telegram Channel**: [@Elevenyts](https://t.me/elevenyts)
-- **Support Group**: [@Elevenyts Music](https://t.me/elevenytsmusic) 
+- **Telegram Channel**: [@onyxXmusicbot](https://t.me/elevenyts)
+- **Support [@onyxXmusicbot ](https://t.me/elevenytsmusic) 
 
 ---
 
